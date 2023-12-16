@@ -1,0 +1,13 @@
+[Unit]
+Description=Streamer screen communication
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/script/streamer-screen-communication
+ExecStart=/usr/bin/python /home/pi/script/streamer-screen-communication/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
